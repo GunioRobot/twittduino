@@ -1,0 +1,26 @@
+Twittduino:
+
+Display an twitter feed on a Serial lcd
+
+Requirements:
+
+	Arduino Decimillia or compatible clone
+
+	Sparkfun's 20x4 LCD  
+	http://www.sparkfun.com/commerce/product_info.php?products_id=462
+
+Usage:
+	First program your arduino with Twitduino.pde
+	Then using Arduino's IDE or other program get the path to
+	the Arduino's serial port (/dev/tty.usbserial-A60049lS on my mac)
+
+	Edit twittduino.py so the serial line has your serial port's path
+	(line 13)
+	
+	Then edit line 18 and change USERNAME and PASSWORD with your 
+	Twitter info.
+
+	Then go to a console and run python twittduino.py to read your messages.
+	
+	Make sure your LCD is configured to the right baud rate before starting the
+	program and properly connected (lcd's TTL to arduino's TX, +5V to 5V and GND to Gnd)
