@@ -10,31 +10,31 @@ void setup()
   delay(200);
   Serial.print(127,BYTE);
   delay(200);
-  
+
 }
 
 void loop()
 {
   if (Serial.available()) {
     val = Serial.read();
-    
+
     if(val == '~'){
       limpia(0);
       val = 0;
     }
-   
+
    if(val == '`'){
           col++;
           salta(col);
           val =0;
         }
-        
+
    if(val == '¤'){ //opt6
           blink();
           val =0;
    }
           manda(val);
-  }    
+  }
 }
 
 void manda(int vale){
@@ -44,7 +44,7 @@ if(vale < 32 || vale > 123){
               Serial.print(vale,BYTE);
               delay(20);
               Serial.print(255,BYTE);
-              delay(20); 
+              delay(20);
               Serial.print(190,BYTE);
               delay(20);
 }
